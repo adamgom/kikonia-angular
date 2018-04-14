@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <h2 class="akapit">Nasze przykładowe produkty</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <nav class="nav justify-content-center nav-tabs">
+      <a class="nav-link active"
+        [ngClass]="{active: wybranyTypuProduktu == 'poduszka'}"
+        (click)="wyborTypuProduktu('poduszka')">Poduszki</a>
+      <a class="nav-link" 
+        [ngClass]="{active: wybranyTypuProduktu == 'kocyk'}"
+        (click)="wyborTypuProduktu('kocyk')">Kocyki</a>
+      <a class="nav-link" 
+        [ngClass]="{active: wybranyTypuProduktu == 'spiwor'}"
+        (click)="wyborTypuProduktu('spiwor')">Śpiwory</a>
+      <a class="nav-link"
+        [ngClass]="{active: wybranyTypuProduktu == 'wkladka'}"
+        (click)="wyborTypuProduktu('wkladka')">Wkładki</a>
+      <a class="nav-link"
+        [ngClass]="{active: wybranyTypuProduktu == 'zabawka'}"
+        (click)="wyborTypuProduktu('zabawka')">Zabawki</a>
+      <a class="nav-link"
+        [ngClass]="{active: wybranyTypuProduktu == 'akcesoria'}" 
+        (click)="wyborTypuProduktu('akcesoria')">Akcesoria</a>
+      <a class="nav-link"
+        [ngClass]="{active: wybranyTypuProduktu == 'mix'}"
+        (click)="wyborTypuProduktu('mix')">Zestawy</a>
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="col-5" id="scroll">
+    <app-element
+      *ngFor="let elListy of listaProduktowWyfiltrowana"
+      [elementListy]="elListy"></app-element>
+  </div>
+  <div class="col-7" id="detal">
+    <app-detale *ngIf="konkretnyProdukt; else info" [konkretnyProduktWybrany]="konkretnyProdukt">
+    </app-detale>
+    <ng-template #info >
+      <div class="pytanie">
+      <h2>Proszę wybrać produkt</h2>
+      </div>
+    </ng-template>
+  </div>
+</div>

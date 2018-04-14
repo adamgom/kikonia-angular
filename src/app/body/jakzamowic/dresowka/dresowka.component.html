@@ -1,0 +1,22 @@
+<div *ngFor="let dres of dresowka; let i1 = index">
+  <div class="row"
+    *ngIf="i1 % liczObrWWierszuTabela.length === 0">
+    <div class="col-xs-12 col-sm-6 col-md-2"
+      *ngFor="let i2 of liczObrWWierszuTabela">
+        <a
+          *ngIf="i1+i2 <= dlListDres"
+          [href]="'./assets/dres/big/' + dresowka[i1+i2].imgPath">
+          <img [src]="'./assets/dres/' + dresowka[i1+i2].imgPath" alt=""><br>
+        </a>
+        <table *ngIf="i1+i2 <= dlListDres"><tr>
+                <td class="numer">{{i1+i2+1}}</td>
+                <td>{{ dresowka[i1+i2].nazwa }}</td>
+        </tr></table>
+    </div>
+  </div>
+</div>
+<!-- <popup  #popup>
+    {{ dlListMa }}
+<img *ngIf="i1+i2 <= dlListMat"
+[src]="'../assets/dres/big/' + materialy[i1+i2].imgPath" alt="">
+</popup> -->

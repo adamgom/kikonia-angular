@@ -1,0 +1,30 @@
+<header *ngIf="size > 990; else altcontent">
+  <div class="row">
+    <div class="col-md-3">
+      <a href="index.html"> 
+        <img class="logoimg1" src="../assets/img/logo.png" alt="">
+      </a>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <img class="logoimg2" src="../assets/img/bitmap.png">
+    </div>
+  </div>
+  <div class="row zapr">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      Zapraszamy na strony na <a style="color: #3b5999;" href="https://www.facebook.com/Kikonia-152904768621077"> Facebooku</a> lub na <a style="color: #fe5600;" href="http://allegro.pl/listing/user/listing.php?us_id=45526010&order=m"> Allegro</a>
+    </div>
+  </div>
+</header>
+<ng-template #altcontent>
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <a href="index.html"> 
+        <img  class="logoimg1" src="../assets/img/logo.png" alt="">
+      </a>
+    </div>
+    <div class="col-md-8 col-sm-8 zapr" style="font-family: 'Indie Flower', cursive;">
+      Zapraszamy na strony na <a style="color: #3b5999;" href="https://www.facebook.com/Kikonia-152904768621077"> Facebooku</a> lub na <a style="color: #fe5600;" href="http://allegro.pl/listing/user/listing.php?us_id=45526010&order=m"> Allegro</a>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,59 @@
+header {
+	font-family: 'Indie Flower', cursive;
+	font-variant: small-caps;
+	letter-spacing: 2px;
+	font-weight: bold;
+	/* background-color: rgba(74, 194, 96, 0.20) */
+}
+
+.logoimg1 {
+	text-align: left;
+	max-height: 140px;
+	max-width: 100%;
+}
+
+.logoimg2 {
+	max-width: 380px;
+	max-width: 100%;
+}
+
+.logoimg3 {
+	text-align: right;
+}
+
+#logotext {
+	text-align: center;
+}
+
+.zapr {
+	padding: 10px 0;
+  font-size: 	30px;
+	text-align: center; 
+	font-family: 'Indie Flower', cursive;
+}
+
+@media screen and (max-width: 1200px) {
+  h4 {font-size: 20px;}
+}
+@media screen and (max-width: 992px) {
+  h4 {font-size: 16px;} 
+}
+@media screen and (max-width: 768px) {
+	.zapr {font-size: 24px;}
+	h4 {font-size: 18px;}
+	/* img {src: unset} */
+}
+@media screen and (max-width: 574px) {
+	.zapr {font-size: 24px;}
+  h4 {font-size: 14px;}
+  img {
+		border-radius: 4px;
+    max-height: 80px;
+    padding: 2px;
+	}
+	.logoimg1 {
+		text-align: left;
+		max-height: 70px;
+		max-width: 100%;
+	}
+}

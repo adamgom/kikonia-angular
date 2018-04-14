@@ -1,0 +1,14 @@
+<a
+class="list-group-item clearfix"
+(click)="wyborProduktu()">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-5 col-sm-12">
+        <h4 class="list-group-item-heading"> {{ elementListy.sNazwa }} </h4>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-7 col-sm-12 obraz">
+          <img [src]="'../assets/prod/' + elementListy.imgPath" alt="">
+        </div>
+    </div>
+  </div>
+</a>
